@@ -50,11 +50,12 @@ app.post("/singIn", async (req, res) => {
 
   res.send("hello");
 });
-app.get("/userRegister02", (req, res) => {
+app.get("/datas", (req, res) => {
   userDetails.find().then((ee) => {
-    console.log(ee);
+    // console.log(ee);
+     res.send(ee);
   });
-  res.send("hello");
+ 
 });
 app.listen(process.env.PORT, () => {
   console.log("connected express..");
