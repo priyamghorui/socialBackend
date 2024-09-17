@@ -28,11 +28,14 @@ app.post("/singUp", async (req, res) => {
     .save()
     .then(() => {
       console.log("ok");
+      res.send("ok done");
+
     })
     .catch((e) => {
       console.log("error", e);
+      res.send("error --> " + e);
+
     });
-  res.send("hello");
 });
 app.post("/singIn", async (req, res) => {
   // console.log(userDataGet);
